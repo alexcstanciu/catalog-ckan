@@ -56,7 +56,8 @@ Example:
         Dataset Point of Contact
       </td>
       <td>
-        {% for distributor in h.ioos_theme_get_pkg_item(pkg, "distributor-info") %}
+      {% if h.ioos_theme_get_pkg_item(pkg, "distributor-info") %}
+	{% for distributor in h.ioos_theme_get_pkg_item(pkg, "distributor-info") %}
           {% if distributor['distributor-contact']['contact-info'] %}
             {% set contact = distributor['distributor-contact']['contact-info'] %}
             {% if distributor['distributor-contact']['individual-name'] %}
@@ -75,6 +76,7 @@ Example:
             {% endif %}
           {% endif %}
         {% endfor %}
+      {% endif %}
       </td>
     </tr>
   </tbody>
