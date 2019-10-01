@@ -16,7 +16,8 @@ Example:
         General Documentation
       </td>
       <td width="70%">
-        {% for distributor in h.ioos_theme_get_pkg_item(pkg, "distributor-info") %}
+      {% if h.ioos_theme_get_pkg_item(pkg, "distributor-info") %}  
+	{% for distributor in h.ioos_theme_get_pkg_item(pkg, "distributor-info") %}
           {% for doc in distributor['transfer-options'] %}
             {% if doc['function'] == 'information' %}
               <p>
@@ -29,6 +30,7 @@ Example:
             {% endif %}
           {% endfor %}
         {% endfor %}
+      {% endif  %}
       </td>
     </tr>
     <tr>
