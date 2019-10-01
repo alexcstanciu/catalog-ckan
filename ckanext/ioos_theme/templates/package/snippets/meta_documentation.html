@@ -38,7 +38,8 @@ Example:
         Associated Documentation
       </td>
       <td width="70%">
-        {% for agginfo in h.ioos_theme_get_pkg_item(pkg, "aggregation-info") %}
+      {% if h.ioos_theme_get_pkg_item(pkg, "aggregation-info") %}
+	{% for agginfo in h.ioos_theme_get_pkg_item(pkg, "aggregation-info") %}
         {{ agginfo['aggregate-dataset-name'] }}
         <ul>
           {% for party in agginfo['responsible-party'] %}
@@ -58,6 +59,7 @@ Example:
           {% endfor %}
         </ul>
         {% endfor %}
+      {% endif %}
       </td>
     </tr>
   </tbody>
