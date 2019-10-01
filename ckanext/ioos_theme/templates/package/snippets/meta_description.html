@@ -46,11 +46,13 @@ Example:
         Date(s)
       </td>
       <td width="70%">
+      {% if h.ioos_theme_get_pkg_item(pkg, "dataset-reference-date") %}  
         {% for refdate in h.ioos_theme_get_pkg_item(pkg, "dataset-reference-date") %}
         {{ refdate.type }}:
         {{ refdate.value }}
         <br>
         {% endfor %}
+      {% endif %}
       </td>
     </tr>
     {% if h.ioos_theme_get_pkg_item(pkg, "dataset-edition") %}
@@ -59,9 +61,11 @@ Example:
         Edition
       </td>
       <td width="70%">
+      {% if h.ioos_theme_get_pkg_item(pkg, "dataset-edition") %}  
         {% for edition in h.ioos_theme_get_pkg_item(pkg, "dataset-edition") %}
         {{ edition }}<br>
         {% endfor %}
+      {% endif %}
       </td>
     </tr>
     {% endif %}
@@ -191,10 +195,12 @@ Example:
         Use Limitations
       </td>
       <td>
+      {% if constraint in h.ioos_theme_get_pkg_item(pkg, "use-constraints") %}  
         {% for constraint in h.ioos_theme_get_pkg_item(pkg, "use-constraints") %}
           {{constraint}}
           <br>
         {% endfor %}
+      {% endif %}
       </td>
     </tr>
     {% endif %} 
