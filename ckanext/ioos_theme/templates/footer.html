@@ -5,7 +5,12 @@
         <div class="footer-links">
           {% block footer_nav %}
             <div class="col-md-4">
-    
+              <h1 class="footer-title">Useful Links</h1>
+                <ul class="unstyled">
+                    {% block footer_links %}
+                      <li><a href="{{ h.url_for(controller='home', action='about') }}">{{ _('About {0}').format(g.site_title) }}</a></li>
+                      <li><a href="http://spero.ici.ro/">spero.ici.ro</a></li>
+                    {% endblock %}
             </div>
             <div class="col-md-4">
                 {% block footer_lang %}
@@ -13,7 +18,9 @@
                 {% endblock %}
             </div>
             <div class="col-md-4">
-            
+              <img style="float: left;padding-right: 20px;padding-top: 5px;" src="http://spero.ici.ro/wp-content/uploads/2017/05/Romanian_Space_Agency_logo.png" alt="footer logo">
+                <p>Romanian Space Agency</p>
+                <a class="contact-us" href="http://rosa.ro">ROSA</a>
             </div>
             
           {% endblock %}

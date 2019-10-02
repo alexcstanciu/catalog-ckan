@@ -6,15 +6,21 @@
       {{ h.render_markdown(intro) }}
     {% else %}
       <h1 class="page-heading">{{ _("Welcome to the IOOS Catalog") }}</h1>
-      <p>
-          IOOS’ mission is to produce, integrate, and communicate high quality ocean, coastal and Great Lakes information that meets the safety, economic, and stewardship needs of the Nation. The IOOS Catalog is the master inventory of IOOS 
-        <a href="https://ioos.noaa.gov/data/contribute-data/common-data-formats/">datasets</a>
-        and 
-        <a href="https://ioos.noaa.gov/data/contribute-data/data-access-services/">data access services</a> provided by our network 
-        of 11 Regional Associations, functional data assembly centers (DACs), and federal partners.  Search for datasets below, 
-        and for additional information about the IOOS Catalog, please
-        <a href="https://data.ioos.us/about">read here</a>.
-      </p>
+      <p>The IOOS Catalog (<a href="https://data.ioos.us/">https://data.ioos.us/</a>) is an open data portal developed at U.S. Integrated Ocean Observing System under the authority of NOAA as the lead federal agency for implementation and administration of the System. 
+This implementation is intended for collecting and managing data held by Romanian public authorities and research institutions and it is realized in the frame of the project <em>SPERO &#8211; Space technologies used in the management of disasters and major crises, manifested at local, national and regional levels</em>. SPERO received funding from the Minister of Research and Innovation, <a href="https://uefiscdi.ro">UEFISCDI</a> under grant agreement no 3Sol/2017, Programme PNCDI III, duration: April 2017 &#8211; March 2020. The beneficiary public authority of this project is &#8220;Romanian Space Agency&#8221; (<a href="http://rosa.ro">ROSA</a>).</p>
+<p><center><a><img class="" src="http://spero.ici.ro/wp-content/uploads/2017/05/Romanian_Space_Agency_logo.png" width="105" height="105" /></a></center></p>
+
+The Catalog inventories all the compliant data access service endpoints provided by the interested Organizations in a single
+    metadata repository, for discovery by end users.  </p>
+
+<p>The Catalog is populated by ISO 19115 metadata records using DMAC-recommended standard vocabularies and data formats wherever
+    possible (netCDF-CF [1], ACDD [2]).  Organizations publish their metadata to web accessible folders, or
+    OGC CS-W services, and the Catalog harvests metadata from these locations on a daily basis.  </p>
+
+<p>The Catalog provides a searchable user graphical user interface (<a href="https://data.ioos.us/">https://data.ioos.us/</a>)
+    for interactive data discovery by users, as well as a native API (<a href="https://data.ioos.us/api/3">https://data.ioos.us/api/3</a>)
+    and OGC CS-W (<a href="https://data.ioos.us/csw?service=CSW&request=GetCapabilities">https://data.ioos.us/csw?service=CSW&request=GetCapabilities</a>) -compatible service for machine-based access to its inventory of data products </p>
+
     {% endif %}
   </header>
 
