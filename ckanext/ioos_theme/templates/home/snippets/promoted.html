@@ -6,8 +6,7 @@
       {{ h.render_markdown(intro) }}
     {% else %}
       <h1 class="page-heading">{{ _("Welcome to the IOOS Catalog") }}</h1>
-      <p>The IOOS Catalog (<a href="https://data.ioos.us/">https://data.ioos.us/</a>) is an open data portal developed at U.S. Integrated Ocean Observing System under the authority of NOAA as the lead federal agency for implementation and administration of the System. 
-This implementation is intended for collecting and managing data held by Romanian public authorities and research institutions and it is realized in the frame of the project <em>SPERO &#8211; Space technologies used in the management of disasters and major crises, manifested at local, national and regional levels</em>. SPERO received funding from the Minister of Research and Innovation, <a href="https://uefiscdi.ro">UEFISCDI</a> under grant agreement no 3Sol/2017, Programme PNCDI III, duration: April 2017 &#8211; March 2020. The beneficiary public authority of this project is &#8220;Romanian Space Agency&#8221; (<a href="http://rosa.ro">ROSA</a>).</p>
+      <p>The IOOS Catalog (<a href="https://data.ioos.us/">https://data.ioos.us/</a>) is an open data portal. This implementation is intended for collecting and managing data held by Romanian public authorities and research institutions and it is realized in the frame of the project <em>SPERO &#8211; Space technologies used in the management of disasters and major crises, manifested at local, national and regional levels</em>. SPERO received funding from the Minister of Research and Innovation, <a href="https://uefiscdi.ro">UEFISCDI</a> under grant agreement no 3Sol/2017, Programme PNCDI III, duration: April 2017 &#8211; March 2020. The beneficiary public authority of this project is &#8220;Romanian Space Agency&#8221; (<a href="http://rosa.ro">ROSA</a>).</p>
 <p><center><a><img class="" src="http://spero.ici.ro/wp-content/uploads/2017/05/Romanian_Space_Agency_logo.png" width="105" height="105" /></a></center></p>
 
 The Catalog inventories all the compliant data access service endpoints provided by the interested Organizations in a single
@@ -24,13 +23,4 @@ The Catalog inventories all the compliant data access service endpoints provided
     {% endif %}
   </header>
 
-  {% block home_image %}
-    <section class="media-overlay hidden-phone">
-      {% block home_image_content %}
-        <a class="media-image" href="#">
-          <img src="https://cdn.ioos.noaa.gov/media/2017/12/deployCTD2-300x225.jpg" class="img-responsive" alt="Placeholder" />
-        </a>
-      {% endblock %}
-    </section>
-  {% endblock %}
 </div>
